@@ -105,16 +105,22 @@
         }
 
       /* Header Styles */
- /* Hero Section */
- #hero {
-            height: 100vh;
-            background: linear-gradient(rgba(74, 44, 42, 0.7), rgba(74, 44, 42, 0.7)), 
-                        url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-4.0.3') center/cover no-repeat;
-            display: flex;
-            align-items: center;
-            color: white;
-            text-align: center;
-            padding-top: 80px;
+      header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(245, 240, 230, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 15px 0;
+            transition: var(--transition);
+        }
+
+        header.sticky {
+            background-color: rgba(245, 240, 230, 0.98);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
         }
 
 .header-container {
@@ -141,17 +147,9 @@
 .logo-text {
   font-family: 'Patrick Hand', cursive;
   font-size: 1.8rem;
-  color: #6B4226;
   font-style: italic;
+  color: #6B4226;
 }
-
-
-
-
-
-    
-
-       
 
         .nav-menu {
             display: flex;
@@ -306,7 +304,6 @@
         /* Hero Section */
         #hero {
             height: 100vh;
-            height: 100vh;
             background: linear-gradient(rgba(74, 44, 42, 0.7), rgba(74, 44, 42, 0.7)), 
                         url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-4.0.3') center/cover no-repeat;
             display: flex;
@@ -332,9 +329,44 @@
             margin-bottom: 2rem;
         }
 
-       
-      
-        
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-img {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-text h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .about-text ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .about-text li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .about-text li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
     </style>
 </head>
 <body>
@@ -391,6 +423,37 @@
                 <h1>Rasakan Kenikmatan Kopi Spesial</h1>
                 <p>Setiap tegukan adalah perjalanan rasa yang memikat, mulai dari biji kopi terpilih hingga di tangan barista ahli kami.</p>
                 <a href="#menu" class="btn">Lihat Menu <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Tentang Kopi Kenangan</h2>
+                <p>Menghadirkan pengalaman kopi istimewa sejak 2017.</p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?ixlib=rb-4.0.3" alt="Kedai Kopi">
+                </div>
+                
+                <div class="about-text">
+                    <h3>Cerita Kami</h3>
+                    <p>Kopi Kenangan lahir dari kecintaan terhadap kopi berkualitas dan keinginan untuk menciptakan ruang di mana setiap orang dapat menikmati momen istimewa. Kami memulai dengan satu kedai kecil dan kini berkembang dengan bangga melayani pecinta kopi di berbagai kota.</p>
+                    
+                    <h4>Visi & Misi Kami</h4>
+                    <ul>
+                        <li>Menyajikan kopi berkualitas premium</li>
+                        <li>Menggunakan biji kopi pilihan petani lokal</li>
+                        <li>Menciptakan lingkungan yang hangat dan nyaman</li>
+                        <li>Mengedukasi tentang budaya kopi Indonesia</li>
+                    </ul>
+                    
+                    <a href="#lokasi" class="btn">Temukan Lokasi Kami</a>
+                </div>
             </div>
         </div>
     </section>
