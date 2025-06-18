@@ -104,8 +104,8 @@
             margin: 0 auto;
         }
 
-      /* Header Styles */
-      header {
+       /* Header Styles */
+       header {
             position: fixed;
             top: 0;
             left: 0;
@@ -122,7 +122,6 @@
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
             padding: 10px 0;
         }
-
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -149,6 +148,7 @@
   font-size: 1.8rem;
   color: #6B4226;
 }
+
 
         .nav-menu {
             display: flex;
@@ -407,12 +407,165 @@
             margin-top: 10px;
         }
 
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-info h3 {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info i {
+            color: var(--primary);
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .social-icons {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: var(--transition);
+        }
+
+        .social-icons a:hover {
+            background: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .contact-form {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(139, 90, 43, 0.2);
+        }
+
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        /* Lokasi Section */
+        #lokasi {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+        }
+        
+        .lokasi-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .lokasi-info {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .lokasi-info h3 {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary);
+        }
+        
+        .lokasi-map {
+            flex: 2;
+            min-width: 300px;
+            height: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .lokasi-map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .lokasi-detail {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .lokasi-detail p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .lokasi-detail i {
+            color: var(--primary);
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+
        
     </style>
 </head>
 <body>
-    
-   <!-- Header & Navbar -->
+    <!-- Header & Navbar -->
 <header>
     <div class="container header-container">
       <div class="logo-container">
@@ -531,7 +684,7 @@
                 
                 <!-- Kopi 3 -->
                 <div class="menu-card">
-                    <img src="menu.jpg" alt="Kopi Spesial">
+                    <img src="https://images.unsplash.com/photo-1596075780750-81249df16d19?ixlib=rb-4.0.3" alt="Kopi Spesial">
                     <div class="menu-card-content">
                         <h4>Avocado Coffee</h4>
                         <p>Alpukat segar dengan espresso dan susu</p>
@@ -541,7 +694,7 @@
                 
                 <!-- Makanan 1 -->
                 <div class="menu-card">
-                    <img src="sandwich.jpg" alt="Makanan">
+                    <img src="https://images.unsplash.com/photo-1626082927389-6cd097cee6a6?ixlib=rb-4.0.3" alt="Makanan">
                     <div class="menu-card-content">
                         <h4>Croissant</h4>
                         <p>Croissant ala Perancis dengan berbagai pilihan isi</p>
@@ -572,9 +725,169 @@
         </div>
     </section>
     
+    <!-- Lokasi Section -->
+    <section id="lokasi" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Lokasi Kami</h2>
+                <p>Temukan kedai Kopi Kenangan terdekat di Jakarta</p>
+            </div>
+            
+            <div class="lokasi-container">
+                <div class="lokasi-info">
+                    <h3>Kedai Utama Kopi Kenangan</h3>
+                    <p>Jl. Kenangan Indah No. 123, Jakarta Pusat</p>
+                    
+                    <div class="lokasi-detail">
+                        <h4>Informasi Lokasi</h4>
+                        <p><i class="fas fa-clock"></i> Senin - Jumat: 07:00 - 22:00</p>
+                        <p><i class="fas fa-clock"></i> Sabtu - Minggu: 08:00 - 23:00</p>
+                        <p><i class="fas fa-phone"></i> (021) 1234-5678</p>
+                        <p><i class="fas fa-car"></i> Parkir tersedia untuk 20 mobil</p>
+                        <p><i class="fas fa-subway"></i> 10 menit dari Stasiun Gambir</p>
+                    </div>
+                    
+                    <a href="https://maps.app.goo.gl/example" target="_blank" class="btn" style="margin-top: 20px;">
+                        <i class="fas fa-map-marked-alt"></i> Petunjuk Arah
+                    </a>
+                </div>
+                
+                <div class="lokasi-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.8195613506394!3d-6.194741395493371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTEnNDEuMSJTIDEwNsKwNDknMTQuMyJF!5e0!3m2!1sen!2sid!4v1609291427203!5m2!1sen!2sid" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
     
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Hubungi Kami</h2>
+                <p>Kami siap melayani pertanyaan dan masukan Anda.</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Kopi Kenangan</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Jl. Kenangan Indah No. 123, Jakarta</p>
+                    <p><i class="fas fa-phone"></i> (021) 1234-5678</p>
+                    <p><i class="fas fa-envelope"></i> info@kopikenangan.com</p>
+                    
+                    <h4>Jam Operasional</h4>
+                    <p><i class="fas fa-clock"></i> Senin - Jumat: 07:00 - 22:00</p>
+                    <p><i class="fas fa-clock"></i> Sabtu - Minggu: 08:00 - 23:00</p>
+                    
+                    <h4>Ikuti Kami</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nama</label>
+                            <input type="text" id="name" class="form-control" placeholder="Nama Anda" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" placeholder="email@anda.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subjek</label>
+                            <input type="text" id="subject" class="form-control" placeholder="Subjek Pesan" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Pesan</label>
+                            <textarea id="message" class="form-control" placeholder="Pesan Anda" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">Kirim Pesan <i class="fas fa-paper-plane ms-2"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
     
    
+    
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Sidebar toggle
+        const hamburger = document.getElementById('hamburger');
+        const sidebar = document.getElementById('sidebar');
+        const sidebarClose = document.getElementById('sidebarClose');
+        const sidebarOverlay = document.getElementById('sidebarOverlay');
+        
+        function toggleSidebar() {
+            sidebar.classList.toggle('active');
+            sidebarOverlay.classList.toggle('active');
+            document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : 'auto';
+        }
+        
+        hamburger.addEventListener('click', toggleSidebar);
+        
+        sidebarClose.addEventListener('click', toggleSidebar);
+        
+        sidebarOverlay.addEventListener('click', toggleSidebar);
+        
+        // Close sidebar when clicking on links
+        document.querySelectorAll('.sidebar-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                toggleSidebar();
+            });
+        });
             
-       </body>
-       </html>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Terima kasih atas pesan Anda! Kami akan segera menghubungi Anda.');
+            this.reset();
+        });
+        
+        // Active navigation link based on scroll position
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-menu a, .sidebar-menu a');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            
+        });
+    </script>
+</body>
+</html>
